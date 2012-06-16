@@ -328,7 +328,7 @@ function facebook_comments_display($width, $amount, $fluid = 0) {
   if ($fluid) {
     $class = "fb-comments-fluid";
     // Pearance edit
-    drupal_add_css('.fb-comments-fluid, .fb-comments-fluid iframe[style] {width: 100% !important;}', array('type' => 'inline'));
+    drupal_add_css('.fb-comments-fluid span, .fb-comments-fluid iframe[style] {width: 100% !important;}', array('type' => 'inline'));
   }
   else {
     $class = "";
