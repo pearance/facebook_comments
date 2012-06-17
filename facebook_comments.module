@@ -67,7 +67,7 @@ function facebook_comments_admin() {
     '#type' => 'textfield',
     '#title' => t('Facebook App ID'),
     '#default_value' => variable_get('facebook_comments_appid', ''),
-    '#description' => t('Enter the Facebook App ID to ensure that all comments can be grouped for moderation. <a href="https://developers.facebook.com/apps">Facebook site</a>'),
+    '#description' => t('Enter the <a href="https://developers.facebook.com/apps">Facebook App ID</a> to ensure that all comments can be grouped for moderation.'),
   );
   $form['facebook_comments_style'] = array(
     '#type' => 'select',
@@ -327,8 +327,7 @@ function facebook_comments_display($width, $amount, $fluid = 0) {
   }
   if ($fluid) {
     $class = "fb-comments-fluid";
-    // Pearance edit
-    drupal_add_css('.fb-comments-fluid span, .fb-comments-fluid iframe[style] {width: 100% !important;}', array('type' => 'inline'));
+    drupal_add_css('.fb-comments-fluid, .fb-comments-fluid span, .fb-comments-fluid iframe {width: 100% !important;}', array('type' => 'inline'));
   }
   else {
     $class = "";
